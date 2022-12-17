@@ -1,0 +1,118 @@
+@import "../../variables.scss";
+.phase{
+  position: relative;
+  display: inline-flex;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  @media (max-width: $lg) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &__line{
+    &:before{
+      left: -81px;
+      top: 200px;
+      border-width: 2px;
+      border-color: transparent transparent transparent #121212 ;
+      border-style: solid;
+      position: absolute;
+      width: 260px;
+      height: 120px;
+      border-radius: 60px;
+      content: '';
+      transform: rotate(45deg);
+    }
+    &:after{
+      width: 2px;
+      height: 188px;
+      position: absolute;
+      left: -61.5px;
+      top: 213px;
+      content: '';
+      display: block;
+      background: #121212;
+    }
+    &_1{
+      left: -82px;
+      top: 286px;
+      border-width: 2px;
+      border-color: transparent transparent transparent #121212 ;
+      border-style: solid;
+      position: absolute;
+      width: 260px;
+      height: 120px;
+      border-radius: 60px;
+      content: '';
+      transform: rotate(-45deg);
+    }
+  }
+  &:last-child{
+    padding-bottom: 0;
+    .phase__line{
+      display: none;
+    }
+    .phase__line_1{
+      display: none;
+    }
+  }
+  &:before{
+    height: 90px;
+    width: calc(100% - 135px );
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 135px;
+    border: none;
+    border-top: 2px dashed #121212;
+    content: '';
+    opacity: 0.2;
+    @media (max-width: $lg) {
+
+    }
+  }
+  &:after{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 180px;
+    height: 180px;
+    content: '';
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: transparent transparent transparent #121212;
+    border-style: dashed;
+    opacity: 0.2;
+    transform: rotate(45deg);
+  }
+  &__icon{
+    border: 2px solid #121212;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $lg) {
+      //width: 60px;
+      //height: 60px;
+    }
+  }
+  &__image{
+    display: flex;
+    align-items: center;
+    &_title{
+      transform: rotate(-90deg);
+      line-height: 30px;
+      margin-left: -20px;
+      width: 120px;
+      @media (max-width: $lg) {
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+      }
+    }
+  }
+  &__items{
+    display: flex;
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../variables.scss";
+.benefits{
+  position: relative;
+  padding: 160px 0 0 0;
+  overflow: hidden;
+
+  @media (max-width: $lg ) {
+    padding: 120px 0 0 0;
+  }
+
+  @media (max-width: $md) {
+    padding: 100px 0 0 0;
+  }
+  &__banana {
+    position: absolute;
+
+    top: 160px;
+    left: 10.41vw;
+    z-index: -1;
+
+    @media (max-width: $xxl ) {
+      left: 4vw;
+      height: 120px;
+      width: 120px;
+    }
+
+    @media (max-width: $lg ) {
+      top: 100px;
+
+    }
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+  &__ice{
+    position: absolute;
+    top: 260px;
+    right: 10.41vw;
+    z-index: -1;
+
+    @media (max-width: $xxl ) {
+      right: 4vw;
+      height: 120px;
+      width: 120px;
+    }
+
+    @media (max-width: $lg ) {
+      top: 260px;
+    }
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+  &__title{
+    max-width: 740px;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__wrap{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    @media (max-width: $md) {
+     grid-template-columns: 1fr;
+      margin-top: 60px;
+    }
+  }
+  &__left{
+    align-self: center;
+    @media (max-width: $md) {
+      order: 1
+    }
+  }
+  &__center{
+    @media (max-width: $md) {
+      order: 3;
+    }
+  }
+  &__right{
+    align-self: center;
+    @media (max-width: $md) {
+      order: 2;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../variables.scss";
+.item{
+  padding-left: 40px;
+  position: relative;
+  margin-bottom: 40px;
+  @media (max-width: $md) {
+    margin-bottom: 20px;
+    padding-left: 26px;
+  }
+  &:last-child{
+    margin-bottom: 0;
+    @media (max-width: $md) {
+      margin-bottom: 20px;
+    }
+  }
+  &:after{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    @media (max-width: $md) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &:before{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    content: '';
+    display: block;
+    top: 7px;
+    left: 7px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+    @media (max-width: $md) {
+      width: 5px;
+      height: 5px;
+      left: 5.5px;
+      top: 5.5px;
+    }
+  }
+  &__title{
+    position: relative;
+    font-weight: 700;
+    line-height: 20px;
+    font-style: normal;
+    text-transform: none;
+    @media (max-width: $md) {
+      line-height: 16px;
+    }
+  }
+  &__content{
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 20px;
+    @media (max-width: $md) {
+      line-height: 24px;
+    }
+  }
+}

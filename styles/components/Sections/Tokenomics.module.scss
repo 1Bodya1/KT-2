@@ -1,0 +1,122 @@
+@import "../../variables.scss";
+.section{
+  background-color: #F8F8F8!important;
+  position: relative;
+  padding: 160px 0;
+  overflow: hidden;
+
+  @media (max-width: $lg ) {
+    padding: 120px 0;
+  }
+
+  @media (max-width: $md) {
+    padding: 100px 0 ;
+  }
+  &__smoke {
+    position: absolute;
+
+    top: 170px;
+    left: 10.41vw;
+    z-index: 0;
+
+    @media (max-width: $xxl ) {
+      left: 4vw;
+      height: 120px;
+      width: 120px;
+    }
+
+    @media (max-width: $lg ) {
+      top: 100px;
+
+    }
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+  &__glasses{
+    position: absolute;
+    top: 75px;
+    right: 10.41vw;
+    z-index: 0;
+
+    @media (max-width: $xxl ) {
+      right: 4vw;
+      height: 120px;
+      width: 120px;
+    }
+
+    @media (max-width: $lg ) {
+      top: 260px;
+    }
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+  &__title{
+    max-width: 740px;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__wrap{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 40px;
+    margin-top: 90px;
+    @media (max-width: $md) {
+      grid-template-columns: 1fr;
+      margin-top: 60px;
+      column-gap: 0;
+    }
+  }
+  &__card{
+    background: #fff;
+    border-radius: 30px;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    @media (max-width: $md) {
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    &:last-child{
+      @media (max-width: $md) {
+        margin-bottom: 0;
+      }
+    }
+    &_number{
+      font-style: italic;
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #F8F8F8;
+      @media (max-width: $md) {
+        font-size: 40px;
+      }
+    }
+    &_title{
+      line-height: 35px;
+      font-weight: 700;
+      margin-top: -35px;
+      @media (max-width: $md) {
+        font-size: 16px;
+        line-height: 28px;
+        margin-top: -25px;
+      }
+    }
+    &_content{
+      margin-top: 30px;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      @media (max-width: $md) {
+        margin-top: 20px;
+        font-size: 12px;
+        line-height: 21px;
+      }
+    }
+  }
+}

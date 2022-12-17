@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+.item{
+  width: 350px;
+  margin-left: 40px;
+  &:first-child{
+    margin-left: 0;
+  }
+  @media (max-width: $lg) {
+    width: 146px ;
+  }
+
+  &__title{
+    padding: 10px 8px;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 20px;
+    @media (max-width: $lg) {
+      margin-bottom: 15px;
+    }
+  }
+  &__content{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    height: 100px;
+    @media (max-width: $lg) {
+      height: 160px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
